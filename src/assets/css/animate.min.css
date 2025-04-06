@@ -1,0 +1,6 @@
+@charset "UTF-8";
+.animated {
+  -webkit-animation-duration: 600ms;
+  animation-duration: 600ms;
+  -webkit-animation-fill-mode: both;
+}
