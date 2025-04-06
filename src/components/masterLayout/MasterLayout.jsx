@@ -56,9 +56,9 @@ const MasterLayout = (props) => {
             >
               <AiOutlineMenuUnfold size={26} className="mt-1" />
             </button>
-            <div className="nav-logo mt-2">
-              <RiLayoutHorizontalLine size={26} className="me-2 text-danger" />
-            </div>
+            <NavLink to="/" className="nav-logo mt-2">
+              <RiLayoutHorizontalLine size={26} className="me-4 text-danger" />
+            </NavLink>
             <h6 className="mt-3">Task Management</h6>
           </Navbar.Brand>
 
