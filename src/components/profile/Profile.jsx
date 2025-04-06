@@ -80,19 +80,23 @@ const Profile = () => {
   return (
     <div className="container">
       <div className="row d-flex justify-content-center">
-        <div className="col-md-11 mt-5">
-          <div className="card">
+        <div className="col-12 col-sm-10 col-md-12 col-lg-11 mt-5">
+          <div className="card shadow-lg">
             <div className="card-body">
               <div className="container-fluid">
-                <img
-                  ref={userImgViewRef}
-                  className="icon-nav-img profile-image-lg"
-                  src={ProfileData?.photo || getUserDetails()?.photo}
-                  alt="Profile"
-                />
-                <hr />
+                <div className="text-center mb-4">
+                  <img
+                    ref={userImgViewRef}
+                    className="profile-image-lg"
+                    src={ProfileData?.photo || getUserDetails()?.photo}
+                    alt="Profile"
+                  />
+                  <hr />
+                </div>
+
                 <div className="row">
-                  <div className="col-4 p-2">
+                  {/* Profile Picture */}
+                  <div className="col-12 col-sm-6 col-md-4 p-2">
                     <label>Profile Picture:</label>
                     <input
                       type="file"
@@ -102,7 +106,9 @@ const Profile = () => {
                       key={Date.now()}
                     />
                   </div>
-                  <div className="col-4 p-2">
+
+                  {/* Email Address */}
+                  <div className="col-12 col-sm-6 col-md-4 p-2">
                     <label>Email Address:</label>
                     <input
                       type="email"
@@ -113,7 +119,8 @@ const Profile = () => {
                     />
                   </div>
 
-                  <div className="col-4 p-2">
+                  {/* First Name */}
+                  <div className="col-12 col-sm-6 col-md-4 p-2">
                     <label>First Name:</label>
                     <input
                       type="text"
@@ -123,7 +130,9 @@ const Profile = () => {
                       key={Date.now()}
                     />
                   </div>
-                  <div className="col-4 p-2">
+
+                  {/* Last Name */}
+                  <div className="col-12 col-sm-6 col-md-4 p-2">
                     <label>Last Name:</label>
                     <input
                       type="text"
@@ -133,7 +142,9 @@ const Profile = () => {
                       key={Date.now()}
                     />
                   </div>
-                  <div className="col-4 p-2">
+
+                  {/* Mobile Number */}
+                  <div className="col-12 col-sm-6 col-md-4 p-2">
                     <label>Mobile Number:</label>
                     <input
                       type="text"
@@ -143,7 +154,9 @@ const Profile = () => {
                       key={Date.now()}
                     />
                   </div>
-                  <div className="col-4 p-2">
+
+                  {/* Password */}
+                  <div className="col-12 col-sm-6 col-md-4 p-2">
                     <label>Password:</label>
                     <input
                       type="password"
@@ -152,14 +165,16 @@ const Profile = () => {
                       key={Date.now()}
                     />
                   </div>
-                  <div>
-                    <button
-                      onClick={UpdateMyProfileButton}
-                      className="w-25 mt-3 float-start btn btn-primary animated fadeInUp"
-                    >
-                      Update profile
-                    </button>
-                  </div>
+                </div>
+
+                {/* Update Profile Button */}
+                <div className="d-flex justify-content-center">
+                  <button
+                    onClick={UpdateMyProfileButton}
+                    className="btn btn-primary mt-3 w-100 animated fadeInUp"
+                  >
+                    Update Profile
+                  </button>
                 </div>
               </div>
             </div>
