@@ -161,6 +161,7 @@ const Profile = () => {
                     <input
                       type="password"
                       className="form-control animated fadeInUp"
+                      defaultValue={ProfileData?.password}
                       ref={passwordRef}
                       key={Date.now()}
                     />
